@@ -1,11 +1,11 @@
 [
-{ "question": "Prvý víťaz Tour de France z roku 1903", "answers": ["Peter Sagan", "Maurice Garin", "Eddy Merckx", "Chris Froome"], "correct": 1 },
-{"question": "Prvý víťaz kulturistickej súťaže Mr. Olympia z roku 1965", "answers": ["Larry Scott", "Arnold Schwarzenegger", "Frank Zane", "Steve Reeves"], "correct": 0},
-{"question": "Prvý Slovák, ktorý získal prvú olympijskú medailu (rok 1936, striebro - zápasenie)", "answers": ["Michal Martikán", "Jozef Herda", "Jozef Lohyňa", "Vladimir Križo"], "correct": 1},
-{"question": "Prvý tenista, ktorý v roku 1938 zvíťazil v dvojhre vo všetkých Grandslamových turnajoch v jednom kalendárnom roku", "answers": ["Rod Laver", "Stefan Edberg", "Donald Budge", "Boris Becker"], "correct": 2},
-{ "question": "Slovensko-maďarsko-španielsky futbalista, ktorý má sochu pred štadiónom v Barcelóne", "answers": ["Ladislav Kubala", "Peter Dubovský", "Róbert Mak", "Stanislav Lobotka"], "correct": 0 },
-{ "question": "Peter Dubovský bol...", "answers": ["Futbalista", "Hokejista", "Plavec", "Biatlonista"], "correct": 0 },
-{ "question": "Natália Hejková bola...", "answers": ["Trénerka basketbalu", "Trénerka volejbalu", "Trénerka tenisu", "Trénerka futbalu"], "correct": 0 }
+{ "question": "Prvý víťaz Tour de France \nz roku 1903", "answers": ["Peter Sagan", "Maurice Garin", "Eddy Merckx", "Chris Froome"], "correct": 1 },
+{"question": "Prvý víťaz kulturistickej súťaže \nMr. Olympia z roku 1965", "answers": ["Larry Scott", "Arnold Schwarzenegger", "Frank Zane", "Steve Reeves"], "correct": 0},
+{"question": "Prvý Slovák, ktorý získal prvú olympijskú medailu \n(rok 1936, striebro - zápasenie)", "answers": ["Michal Martikán", "Jozef Herda", "Jozef Lohyňa", "Vladimir Križo"], "correct": 1},
+{"question": "Prvý tenista, ktorý v roku 1938 zvíťazil \nv dvojhre vo všetkých Grandslamových turnajoch v jednom kalendárnom roku", "answers": ["Rod Laver", "Stefan Edberg", "Donald Budge", "Boris Becker"], "correct": 2},
+{ "question": "Slovensko-maďarsko-španielsky futbalista, \nktorý má sochu pred štadiónom v Barcelóne", "answers": ["Ladislav Kubala", "Peter Dubovský", "Róbert Mak", "Stanislav Lobotka"], "correct": 0 },
+{ "question": "Peter Dubovský \nbol...", "answers": ["Futbalista", "Hokejista", "Plavec", "Biatlonista"], "correct": 0 },
+{ "question": "Natália Hejková \nbola...", "answers": ["Trénerka basketbalu", "Trénerka volejbalu", "Trénerka tenisu", "Trénerka futbalu"], "correct": 0 }
 
 
 ]
