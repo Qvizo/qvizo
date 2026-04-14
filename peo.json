@@ -1,0 +1,57 @@
+[
+{ "question": "Prvý človek na Mesiaci", "answers": ["Buzz Aldrin", "Neil Armstrong", "Yuri Gagarin", "Michael Collins"], "correct": 1 },
+{ "question": "Autor knihy 'Vojna a mier'", "answers": ["Lev Tolstoj", "Anton Čechov", "Fjodor Dostojevskij", "Maxim Gorkij"], "correct": 0 },
+{ "question": "Meno domorodého priateľa Robinsona Crusoa v pôvodnom románe Daniela Defoa", "answers": ["Pondelok", "Streda", "Piatok", "Utorok"], "correct": 2 },
+{ "question": "Zvonár v Chráme Matky Božej v slávnom románe od Victora Huga", "answers": ["Quintano", "Quasimodo", "Quentin", "Quintus"], "correct": 1 },
+{ "question": "Objaviteľ penicilínu", "answers": ["Alexander Fleming", "Marie Curie", "Louis Pasteur", "Joseph Lister"], "correct": 0 }, 
+
+  
+{ "question": "Prvý človek vo vesmíre", "answers": ["Buzz Aldrin", "Neil Armstrong", "Yuri Gagarin", "Michael Collins"], "correct": 2 },
+{ "question": "Prvý človek, ktorý v roku 1911 dosiahol južný pól", "answers": ["Robert Peary", "Edmund Hillary", "Roald Amundsen", "Ernest Shackleton"], "correct": 2 },
+{ "question": "Prvý človek, ktorý v roku 1909 dosiahol severný pól", "answers": ["Robert Peary", "Edmund Hillary", "Roald Amundsen", "Ernest Shackleton"], "correct": 0 },
+{ "question": "Prvý prezident Českej republiky", "answers": ["Václav Klaus", "Miloš Zeman", "Václav Havel", "Karel Schwarzenberg"], "correct": 2 },
+{ "question": "Prvý český spevák, ktorý je držiteľom Zlatého slávika z roku 1962", "answers": ["Karel Gott", "Waldemar Matuška", "Dalibor Janda", "Jiří Suchý"], "correct": 1 },
+{ "question": "Prvý uhorský kráľ korunovaný v Stoličnom Belehrade v roku 1000", "answers": ["Belo I.", "Štefan I.", "Ondrej I.", "Ladislav I."], "correct": 1 },
+{ "question": "Prvý človek, ktorý bol vyobrazený na minci", "answers": ["Tutanchamon", "Šalamún", "Július Cézar", "Augustus"], "correct": 2 },
+{"question": "Prvý prezident Spojených štátov amerických", "answers": ["Thomas Jefferson", "George Washington", "Abraham Lincoln", "Benjamin Franklin"], "correct": 1 },  
+{ "question": "Autor teórie relativity", "answers": ["Nikola Tesla", "Albert Einstein", "Isaac Newton", "Stephen Hawking"], "correct": 1 },
+{ "question": "Vynálezca telefónu", "answers": ["Alexander Graham Bell", "Thomas Edison", "Nikola Tesla", "Antonio Meucci"], "correct": 0 },
+
+
+{"question": "Prvý Slovák vo vesmíre", "answers": ["Vladimír Remek", "Ivan Bella", "Štefan Banič", "Jozef Psotka"], "correct": 1},
+{"question": "Prvý Slovák, ktorý zdolal všetky osemtisícovky sveta", "answers": ["Jozef Psotka", "Peter Hámor", "Zoltán Demján", "Milan Kňažko"], "correct": 1},
+{"question": "Prvý Slovák, ktorý sa stal úradujúcim prezidentom Československa v roku 1935", "answers": ["Gustáv Husák", "Milan Rastislav Štefánik", "Milan Hodža", "Eduard Beneš"], "correct": 2},
+{ "question": "Autor prvého slovenského celovečerného filmu Jánošík z roku 1921", "answers": ["Jaroslav Siakeľ", "Ján Kadár", "Paľo Bielik", "Štefan Uher"], "correct": 0 }, 
+  
+
+{ "question": "Autor knihy '1984'", "answers": ["George Orwell", "Aldous Huxley", "Ray Bradbury", "J.R.R. Tolkien"], "correct": 0 },
+{ "question": "Autor knihy 'Moby-Dick'", "answers": ["Herman Melville", "Edgar Allan Poe", "Mark Twain", "Nathaniel Hawthorne"], "correct": 0 },
+{ "question": "Autor knihy 'Veľký Gatsby'", "answers": ["F. Scott Fitzgerald", "John Steinbeck", "Ernest Hemingway", "William Faulkner"], "correct": 0 },
+{ "question": "Autor knihy 'Sto rokov samoty'", "answers": ["Gabriel García Márquez", "Mario Vargas Llosa", "Julio Cortázar", "Isabel Allende"], "correct": 0 },
+{ "question": "Autor knihy 'Na ceste'", "answers": ["Jack Kerouac", "Allen Ginsberg", "William S. Burroughs", "J.D. Salinger"], "correct": 0 },
+{ "question": "Autor knihy 'Bratia Karamazovovci'", "answers": ["Fjodor M. Dostojevskij", "Lev Tolstoj", "Maxim Gorkij", "Anton Čechov"], "correct": 0 },
+{ "question": "Autor knihy 'Pýcha a predsudok'", "answers": ["Jane Austenová", "Emily Brontëová", "Charlotte Brontëová", "Mary Shelleyová"], "correct": 0 },
+{ "question": "Autor knihy 'Don Quijote'", "answers": ["Miguel de Cervantes", "Gabriel García Márquez", "Federico García Lorca", "Juan Ramón Jiménez"], "correct": 0 },
+{ "question": "Autor knihy 'Pán prsteňov'", "answers": ["J.R.R. Tolkien", "C.S. Lewis", "George R.R. Martin", "J.K. Rowlingová"], "correct": 0 },
+{ "question": "Autor knihy 'Lolita'", "answers": ["Vladimir Nabokov", "Gabriel García Márquez", "William S. Burroughs", "Joseph Heller"], "correct": 0 },
+{ "question": "Autor knihy 'Frankenstein'", "answers": ["Mary Shelley", "Bram Stoker", "Oscar Wilde", "H.G. Wells"], "correct": 0 },
+{ "question": "Autor knihy 'Cesta'", "answers": ["Cormac McCarthy", "Don DeLillo", "Jonathan Franzen", "Philip Roth"], "correct": 0 },
+{ "question": "Autor knihy 'Kto zabil Johna F. Kennedyho'", "answers": ["Norman Mailer", "Truman Capote", "Gore Vidal", "John Updike"], "correct": 0 },
+{ "question": "Autor knihy 'Zločin a trest'", "answers": ["Fjodor M. Dostojevskij", "Lev Tolstoj", "Anton Čechov", "Maxim Gorkij"], "correct": 0 },
+{ "question": "Autor knihy 'Madame Bovaryová'", "answers": ["Gustave Flaubert", "Guy de Maupassant", "Honoré de Balzac", "Emile Zola"], "correct": 0 },
+{ "question": "Autor knihy 'Alchymista'", "answers": ["Paulo Coelho", "Gabriel García Márquez", "Jorge Luis Borges", "Isabel Allende"], "correct": 0 },
+{ "question": "Autor knihy 'Brave New World (Odvážny nový svet)'", "answers": ["Aldous Huxley", "George Orwell", "Ray Bradbury", "Philip K. Dick"], "correct": 0 },
+{ "question": "Autor knihy 'Malý princ'", "answers": ["Antoine de Saint-Exupéry", "Jules Verne", "Hans Christian Andersen", "Victor Hugo"], "correct": 0 },
+{ "question": "Autor knihy 'Kto chytá v žite'", "answers": ["Jerome David Salinger", "Diego Luna", "Lev Nikolajevič Tolstoj", "Franz Kafka"], "correct": 0 },
+{ "question": "Najslávnejší román ruského spisovateľa Leva Nikolajeviča Tolstoja", "answers": ["Starec a more", "Vojna a mier", "Na západe nič nové", "Anna Karenina"], "correct": 1 },
+
+{ "question": "Autor literárneho diela Marína", "answers": ["Martin Kukučín", "Andrej Sládkovič", "Ján Smrek", "Pavol Országh Hviezdoslav"], "correct": 1 },
+{ "question": "Prvá obrázková učebnica na svete, ktorú vydal v roku 1658 Ján Amos Komenský", "answers": ["Schola pansophica", "Didactica magna", "Orbis pictus", "Janua linguarum"], "correct": 2 }
+  
+]
+
+
+
+
+
+
