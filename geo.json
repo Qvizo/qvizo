@@ -1,23 +1,17 @@
 [
-  {"question": "Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška \nSkúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška", "answers": ["Tirana", "Skopje", "Záhreb", "Podgorica"], "correct": 0},
-{"question": "Hlavné mesto", "answers": ["Tirana", "Skopje", "Záhreb", "Podgorica"], "correct": 0},
-  {"question": "Hlavné mesto \nAlbánska", "answers": ["Tirana", "Skopje", "Záhreb", "Podgorica"], "correct": 0},
-  {"question": "Hlavné mesto", "answers": ["Tirana", "Skopje", "Záhreb", "Podgorica"], "correct": 0},
-  {"question": "Hlavné mesto", "answers": ["Tirana", "Skopje", "Záhreb", "Podgorica"], "correct": 0},
-  {"question": "Hlavné mesto", "answers": ["Tirana", "Skopje", "Záhreb", "Podgorica"], "correct": 0},
-  {"question": "Hlavné mesto", "answers": ["Tirana", "Skopje", "Záhreb", "Podgorica"], "correct": 0},
-  {"question": "Hlavné mesto", "answers": ["Tirana", "Skopje", "Záhreb", "Podgorica"], "correct": 0},
-  {"question": "Hlavné mesto", "answers": ["Tirana", "Skopje", "Záhreb", "Podgorica"], "correct": 0},
-  {"question": "Hlavné mesto", "answers": ["Tirana", "Skopje", "Záhreb", "Podgorica"], "correct": 0},
-  {"question": "Hlavné mesto", "answers": ["Tirana", "Skopje", "Záhreb", "Podgorica"], "correct": 0},
-  {"question": "Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška \nSkúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška", "answers": ["Tirana", "Skopje", "Záhreb", "Podgorica"], "correct": 0},
-{"question": "Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška \nSkúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška Skúška", "answers": ["Tirana", "Skopje", "Záhreb", "Podgorica"], "correct": 0},
-
+{"question": "Hlavné mesto \nAlbánska", "answers": ["Tirana", "Skopje", "Záhreb", "Podgorica"], "correct": 0},
 {"question": "Štát, ktorý má \nhlavné mesto Berlín", "answers": ["Nemecko", "Holandsko", "Belgicko", "Japonsko"], "correct": 0},
 { "question": "Počet planét \nv slnečnej sústave", "answers": ["8", "9", "7", "10"], "correct": 0 },
 { "question": "Hlavná zložka \nvzduchu", "answers": ["Kyslík", "Dusík", "Hélium", "Oxid uhličitý"], "correct": 1 },  
 { "question": "Najdlhšia rieka \nAfriky", "answers": ["Níl", "Kongo", "Zambezi", "Limpopo"], "correct": 0 },  
-
+{"question": "Štát, ktorý má \nhlavné mesto Prahu", "answers": ["Poľsko", "Maďarsko", "Česká republika", "Kanada"], "correct": 2},
+{ "question": "Planéta známa ako \nČervená planéta", "answers": ["Mars", "Venuša", "Jupiter", "Merkúr"], "correct": 0 },
+{"question": "Najvyšší vrch pohoria \nVysoké Tatry", "answers": ["Repisko \n(1259 m)", "Gerlachovský štít \n(2654 m)", "Ďumbier \n(2046 m)", "Vihorlat \n(1076 m)"], "correct": 1},
+{"question": "Pohorie, ktoré má najvyšší vrch \nĎumbier", "answers": ["Nízke Tatry", "Tatry", "Malá Fatra", "Veľká Fatra"], "correct": 0},
+{ "question": "Najdlhšia rieka \nJužnej Ameriky", "answers": ["Amazonka", "Paraná", "Orinoco", "Kongo"], "correct": 0 },
+{ "question": "Svetadiel, ktorý má \nnajviac obyvateľov", "answers": ["Európa", "Ázia", "Afrika", "Južná Amerika"], "correct": 1 },
+{"question": "Slovenské mesto, ktoré je známe ako \nPerla Považia alebo Mesto módy", "answers": ["Piešťany", "Trenčín", "Žilina", "Nitra"], "correct": 1},
+  
 {"question": "Hlavné mesto \nArménska", "answers": ["Jerevan", "Baku", "Tbilisi", "Teherán"], "correct": 0},
 {"question": "Hlavné mesto \nAzerbajdžanu", "answers": ["Baku", "Tbilisi", "Bukurešť", "Teherán"], "correct": 0},
 {"question": "Hlavné mesto \nBieloruska", "answers": ["Minsk", "Kyjev", "Riga", "Vilnius"], "correct": 0},
@@ -185,7 +179,7 @@
 {"question": "Hlavné mesto \nAustrálie", "answers": ["Sydney", "Canberra", "Wellington", "Port Vila"], "correct": 1},
 {"question": "Hlavné mesto \nFidži", "answers": ["Suva", "Apia", "Funafuti", "Nuku'alofa"], "correct": 0},
   
-{"question": "Štát, ktorý má \nhlavné mesto Prahu", "answers": ["Poľsko", "Maďarsko", "Česká republika", "Kanada"], "correct": 2},
+
 {"question": "Štát, ktorý má \nhlavné mesto Bratislavu", "answers": ["Slovinsko", "Slovensko", "Srbsko", "Mexiko"], "correct": 1},
 {"question": "Štát, ktorý má \nhlavné mesto Viedeň", "answers": ["Rakúsko", "Nemecko", "Švajčiarsko", "Austrália"], "correct": 0},
 {"question": "Štát, ktorý má \nhlavné mesto Varšavu", "answers": ["Poľsko", "Ukrajina", "Bielorusko", "India"], "correct": 0},
@@ -321,7 +315,7 @@
 {"question": "Štát, ktorý má \nhlavné mesto Canberra", "answers": ["Austrália", "Nový Zéland", "Papua Nová Guinea", "Chorvátsko"], "correct": 0},
 
 
-{ "question": "Planéta známa ako \nČervená planéta", "answers": ["Mars", "Venuša", "Jupiter", "Merkúr"], "correct": 0 },
+
 { "question": "Planéta, ktorá \nmá prstence", "answers": ["Mars", "Saturn", "Venuša", "Uran"], "correct": 1 },
 { "question": "Planéta najbližšia \nk Slnku", "answers": ["Venuša", "Merkúr", "Mars", "Zem"], "correct": 1 },
 { "question": "Planéta, ktorá je známa ako \nmodrá planéta", "answers": ["Zem", "Neptún", "Urán", "Venuša"], "correct": 0 },
@@ -343,8 +337,7 @@
 
 { "question": "Vrstva atmosféry, \nv ktorej sa dejú zmeny počasia", "answers": ["Troposféra", "Termosféra", "Stratosféra", "Mezosféra"], "correct": 0 },
 
-{"question": "Najvyšší vrch pohoria \nVysoké Tatry", "answers": ["Repisko (1259 m)", "Gerlachovský štít (2654 m)", "Ďumbier (2046 m)", "Vihorlat (1076 m)"], "correct": 1},
-{"question": "Najvyšší vrch pohoria \nBelianaske Tatry", "answers": ["Havran (2152 m)", "Gerlachovský štít (2654 m)", "Ďumbier (2046 m)", "Vihorlat (1076 m)"], "correct": 0},
+{"question": "Najvyšší vrch pohoria \nBelianaske Tatry", "answers": ["Havran \n(2152 m)", "Gerlachovský štít \n(2654 m)", "Ďumbier \n(2046 m)", "Vihorlat \n(1076 m)"], "correct": 0},
 {"question": "Najvyšší vrch pohoria \nZápadné Tatry", "answers": ["Bystrá (2248 m)", "Chopok (2024 m)", "Ďumbier (2046 m)", "Baranec (2185 m)"], "correct": 0},
 {"question": "Najvyšší vrch pohoria \nNízke Tatry", "answers": ["Ďumbier (2046 m)", "Chopok (2024 m)", "Veľký Javorník (1072 m)", "Veľký Inovec (901 m)"], "correct": 0},
 {"question": "Najvyšší vrch pohoria \nOravské Beskydy", "answers": ["Babia hora (1725 m)", "Veľký Manín (891 m)", "Vihorlat (1076 m)", "Javorie (1044 m)"], "correct": 0},
@@ -405,7 +398,6 @@
 {"question": "Najvyšší vrch pohoria \nBurda", "answers": ["Plešivec (395 m)", "Bradlo (543 m)", "Rozhľadňa (469 m)", "Dlhý diel (818 m)"], "correct": 0},
 
 {"question": "Pohorie, ktoré má najvyšší vrch \nGerlachovský štít", "answers": ["Tatry", "Nízke Tatry", "Malá Fatra", "Veľká Fatra"], "correct": 0},
-{"question": "Pohorie, ktoré má najvyšší vrch \nĎumbier", "answers": ["Nízke Tatry", "Tatry", "Malá Fatra", "Veľká Fatra"], "correct": 0},
 {"question": "Pohorie, ktoré má najvyšší vrch \nBabia hora", "answers": ["Oravské Beskydy", "Malá Fatra", "Kysucké Beskydy", "Oravská Magura"], "correct": 0},
 {"question": "Pohorie, ktoré má najvyšší vrch \nVeľký Kriváň", "answers": ["Malá Fatra", "Veľká Fatra", "Chočské vrchy", "Nízke Tatry"], "correct": 0},
 {"question": "Pohorie, ktoré má najvyšší vrch \nVeľký Choč", "answers": ["Chočské vrchy", "Malá Fatra", "Veľká Fatra", "Oravská Magura"], "correct": 0},
@@ -499,7 +491,6 @@
 { "question": "Najdlhšia rieka \nAntarktídy", "answers": ["Onyx", "Mawson", "Lambert", "Davis"], "correct": 0 },
 { "question": "Najdlhšia rieka \nAustrálie (Oceánie)", "answers": ["Murray-Darling", "Sepik", "Fly", "Lachlan"], "correct": 0 },
 { "question": "Najdlhšia rieka \nÁzie", "answers": ["Jang-c’-ťiang", "Ganga", "Mekong", "Indus"], "correct": 0 },
-{ "question": "Najdlhšia rieka \nEurópy", "answers": ["Volga", "Dunaj", "Rýn", "Loira"], "correct": 0 },
 { "question": "Najdlhšia rieka \nJužnej Ameriky", "answers": ["Amazonka", "Paraná", "Orinoco", "Kongo"], "correct": 0 },
 { "question": "Najdlhšia rieka \nna svete", "answers": ["Amazonka", "Níl", "Dunaj", "Yangtze"], "correct": 1 },
 { "question": "Najdlhšia rieka \nSevernej Ameriky", "answers": ["Mississippi-Missouri", "Amazonka", "Colorado", "Mackenzie"], "correct": 0 },
@@ -528,9 +519,7 @@
 {"question": "Severoamerické mesto, ktoré má prezývku \nVeterné mesto", "answers": ["Dallas", "Chicago", "Denver", "New York"], "correct": 1},
 { "question": "Slovenské mesto \ns prívlastkom Medená", "answers": ["Banská Štiavnica", "Banská Bystrica", "Považská Bystrica", "Kremnica"], "correct": 1 },
 { "question": "Slovenské mesto \ns prívlastkom Zlatá", "answers": ["Kremnica", "Gelnica", "Rožňava", "Banská Štiavnica"], "correct": 0 },
-{"question": "Slovenské mesto, ktoré je známe ako \nPerla Považia alebo Mesto módy", "answers": ["Piešťany", "Trenčín", "Žilina", "Nitra"], "correct": 1},
   
-{ "question": "Svetadiel, ktorý má \nnajviac obyvateľov", "answers": ["Európa", "Ázia", "Afrika", "Južná Amerika"], "correct": 1 },
 { "question": "Kontinent \nnajmenej obývaný", "answers": ["Antarktída", "Austrália", "Afrika", "Európa"], "correct": 0 },
 { "question": "Svetadiel, v ktorom sa jazdí \nautom prevažne v ľavom pruhu", "answers": ["Afrika", "Ázia", "Austrália", "Európa"], "correct": 2 },
 { "question": "Kontinent, na ktorom sa nachádza \nštát Paraguaj", "answers": ["Afrika", "Južná Amerika", "Ázia", "Severná Amerika"], "correct": 1},
