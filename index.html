@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>QVIZO - MIXÉR OTÁZOK</title>
+<style>
+
+body 
+{
+	font-family: 'Arial', sans-serif;
+	font-size: 18px;
+	text-align: center;
+	background-color: #F0E68C;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+overflow: hidden;
+height: 100vh;
+}
+
+	/* 🔥 PRIDAJ TOTO */
+#newStartWindow {
+	display: none;
+}
+
+.start-container, .new-start-container 
+{
+	margin: 10px;
+	max-width: 600px;   
+    min-height: 500px;  
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 20px;
+	border: 5px solid #333;
+	border-radius: 50px;
+	background-color: #F5F5DC;
+	box-sizing: border-box;
+	width: 90%;
+	position: relative;
+	text-align: center;
+}
+
+
+.question-container, .start-container, .end-container 
+{
+	margin: 20px;
+	max-width: 1200px;         /*⬅️ TÚTO hodnotu môžeš zväčšiť */
+	min-height: 20vh;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 20px;
+	border: 5px solid #333;
+	border-radius: 50px;
+	background-color: #F5F5DC;
+	box-sizing: border-box;
+	width: 90%;
+	position: relative;
+}
+
+
+.question-counter 
+{
+	font-size: 28px;
+	color: #777;
+	margin-bottom: 10px;
+}
+
+
+.question 
+{
+	font-size: 42px;
+	font-weight: bold;
+	color: #333;
+	padding: 15px;
+	border: 3px solid #800080;
+	border-radius: 20px;
+	background-color: #F8D1B2;
+	margin-bottom: 20px;
+	word-wrap: break-word; /* Zabezpečí zalomenie textu */
+		white-space: normal;
+	text-align: center;
+		display: flex;
+	align-items: center;          /* Vertikálne centrovanie */
+	justify-content: center;      /* Horizontálne centrovanie */
+	flex-grow: 1;
+	min-height: 150px; /* Nastavenie minimálnej výšky pre viac riadkov */
+	max-height: 150px;
+  	overflow: hidden;  /* žiadne scrollovanie */
+	overflow-y: auto;
+}
+
+
+.timer 
+{
+	font-size: 45px;
+	color: #800000;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+
+.answers 
+{
+	flex-shrink: 0;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+
+.answer-button 
+{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 45%;
+	margin: 10px 0;
+	padding: 12px;
+	font-size: 52px;
+	font-weight: bold;
+	border: none;
+	border-radius: 12px;
+	background-color: #ddd;
+	color: black;
+	cursor: pointer;
+	box-sizing: border-box;
+ 	height: 70px;
+    overflow: hidden;
+    flex-direction: row; /* Už je flex, len na istotu */
+    align-items: center;
+}
+
+
+.answer-letter 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #800080;
+	color: white;
+	font-size: 50px;
+	border-radius: 50%;
+	margin-right: 20px;
+	width: 60px;
+	aspect-ratio: 1 / 1; /* zabezpečí kruhový tvar */
+	flex-shrink: 0; /* zabráni zmenšovaniu pri dlhších textoch */
+}
+
+
+.answer-text 
+{
+	flex-grow: 1;
+	text-align: center;
+    white-space: normal; /* umožní viac riadkov */
+    overflow-wrap: break-word;
+    line-height: 1.2;
+}
+
+
+.menu button, .back-button, .stop-button 
+{
+	margin: 10px;
+	padding: 10px 20px;
+	font-size: 24px;
+	font-weight: bold;
+	border-radius: 10px;
+	border: 2px solid #333;
+	cursor: pointer;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+	white-space: nowrap;
+}
+
+
+.back-button 
+{
+	background-color: #6495ED !important;
+	color: white;
+}
+
+
+.back-button:hover 
+{
+	background-color: #0000CD !important;
+}
+
+
+.stop-button 
+{
+	background-color: red !important;
+	color: white;
+}
+
+
+.stop-button:hover 
+{
+	background-color: orange !important;
+}
+
+
+.button-container {
+	display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  border: 5px solid #333;
+  border-radius: 50px;
+  background-color: #F5F5DC;
+  width: 90%;
+  max-width: 500px;
+}
+
+.login-container input {
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 70%;
+  border-radius: 10px;
+  border: 1px solid #333;
+}
+
+.login-container button {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 10px 0;   /* aby medzi tlačidlami bola medzera */
+  border-radius: 10px;
+  border: 2px solid #333;
+  cursor: pointer;
+  width: 75%;       /* aby boli tlačidlá rovnako široké */
+}
+
+#authMessage {
+  margin-top: 10px;
+  font-weight: bold;
+  color: red;
+}
+
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;   /* 🔥 TOTO vytvorí väčšiu medzeru pod kategóriami */
+}
+
+.category-btn {
+    background-color: #200080;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-btn.active {
+    background-color: #800080;
+}
+
+.demo-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.demo-popup-box {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 24px;
+  max-width: 400px;
+}	
+	
+#escBtn {
+  background-color: gray !important;
+  color: white;
+}
+
+#escBtn:hover {
+  background-color: darkgray !important;
+}
+	
+
+@media (max-width: 768px) {
+
+.menu button, .back-button, .stop-button 
+{
+	font-size: 18px;  /* Zmenšíme veľkosť textu */
+    padding: 8px 16px; /* Zmenšíme padding */
+}
+
+.button-container {
+    flex-direction: row; /* Zarovnáme tlačidlá vedľa seba */
+    justify-content: space-between; /* Medzera medzi tlačidlami */
+    gap: 10px;
+}
+
+.back-button, .stop-button {
+        width: 45%; /* Nastavíme šírku tlačidiel */
+}
+}
+
+
+.qvizo-title 
+{
+	font-family: 'Broadway', sans-serif;
+	font-size: 100px;
+	color: red;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+
+.qvizo-title .q 
+{
+	color: red;
+}
+
+
+.qvizo-title .vizo 
+{
+	color: black;
+}
+	
+    
+.question-container 
+{
+	display: none;
+}
+
+
+.question-container .qvizo-title 
+{
+	font-size: 40px;
+}
+
+
+.question-container .q 
+{
+	color: red;
+}
+
+.question-container .vizo 
+{
+color: black;
+}
+
+
+.start-container, .end-container 
+{
+	display: none;
+}
+
+
+.end-container 
+{
+	text-align: center;
+}
+
+
+.start-container button.start-button 
+{
+	font-size: 48px;
+	padding: 14px 28px;
+	background-color: #800080;
+	color: white;
+	border-radius: 12px;
+	border: none;
+	cursor: pointer;
+	width: auto;
+	margin-top: 30px;
+	transition: background-color 0.3s ease;
+}
+
+
+.start-container button.start-button:hover 
+{
+	background-color: #B57EDC;
+}
+
+
+.button-container 
+{
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+
+.time-buttons 
+{
+	margin-top: 20px;
+}
+
+
+.time-button 
+{
+	font-size: 20px;
+	font-weight: bold;
+	padding: 10px 20px;
+	margin: 5px;
+	border-radius: 10px;
+	border: 2px solid #333;
+	cursor: pointer;
+	background-color: #F0E68C;
+	transition: background-color 0.3s ease;
+	width: 20%; /* Zabezpečí, že tlačidlá budú rovnako široké */
+}
+
+
+.time-button.active 
+{
+	background-color: #B57EDC;
+	color: white;
+}
+
+
+.button-container button /* Pridané štýly pre tlačidlá "Cafe" a "Solo" */
+{
+	font-size: 30px; /* Zmena veľkosti písma */
+	font-weight: bold;
+	padding: 15px 30px;
+	background-color: #800080 !important;
+	color: white;
+	border-radius: 12px;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+
+/* CAFE */
+.button-container button:first-child {
+    background-color: #4CAF50;
+}
+
+.button-container button:first-child:hover {
+    background-color: #45a049;
+}
+
+/* CAFE SOLO */
+.button-container .cafe-solo-btn {
+    background-color: #1E90FF !important;
+}
+
+.button-container .cafe-solo-btn:hover {
+    background-color: #187bcd !important;
+}
+
+.fullscreen-button 
+{
+	font-size: 48px;
+	padding: 14px 28px;
+	background-color: #4CAF50; 
+	color: white;
+	border-radius: 12px;
+	border: none;
+	cursor: pointer;
+	width: auto;
+	margin-top: 30px;
+	transition: background-color 0.3s ease, font-size 0.3s ease;
+}
+
+
+.fullscreen-button:hover 
+{
+	background-color: green;
+}
+
+
+:fullscreen .question-container 
+{
+  	width: 90%;
+  	max-width: 1600px; 
+  	height: 90vh;
+  	max-height: 90vh;
+  	border-radius: 20px; /* Zaoblenie okrajov (môžete zmeniť alebo odstrániť) */
+  	padding: 10px;
+  	box-sizing: border-box;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: space-between; /* Umiestni text a odpovede do správnych pozícií */
+  	overflow: hidden; /* Skryje všetok obsah, ktorý prekračuje */
+}
+
+
+:fullscreen .answers 
+{
+  display: flex;
+  gap: 5px;
+  justify-content: space-between; /* Udržuje odpovede v riadku, ale zabezpečí medzery medzi nimi */
+    flex-wrap: wrap;  /* zabezpečí zalomenie 5.6.2025*/
+}
+
+	
+:fullscreen .answer-button 
+{	
+	font-size: 32px;
+  	line-height: 1.2;              /* Výška jedného riadku v násobkoch fontu */
+  	  font-size: 32px;
+  height: calc(1.2em * 3 + 30px);
+	width: 48%;  /* Namiesto fixných 700px použi percentá 5.6.2025*/
+  	min-width: 300px; /* Aby sa nezmenšovali príliš 5.6.2025 */
+  	box-sizing: border-box;
+  	overflow: hidden;
+  	display: flex;
+  	flex-direction: row;
+  	align-items: center;
+  	justify-content: flex-start;     
+}
+
+
+:fullscreen .answer-text {
+	white-space: normal;
+  	overflow-wrap: break-word;
+  	text-align: center;
+  	display: -webkit-box;
+  	-webkit-line-clamp: 3;           /* počet riadkov */
+  	-webkit-box-orient: vertical;
+  	overflow: hidden;                /* skryje ďalší text */
+  	font-size: 28px;
+  	line-height: 1.2;
+}
+
+	
+
+:fullscreen .qvizo-title {
+	margin-bottom: 0px;
+}
+
+
+:fullscreen .question-counter {
+	margin-top: 0px;
+  	margin-bottom: 5px;
+}
+
+
+
+:fullscreen .top-bar {
+	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+  	margin: 10px 0;
+  	gap: 20px;          /* Primeraná medzera */
+  	flex-wrap: nowrap;  /* zachováš ich v jednom riadku */
+}
+
+
+:fullscreen .question {
+	font-size: 48px ;
+  max-height: 350px;
+  	min-height: 100px;       /* zvýši minimálnu výšku */
+	overflow: hidden;
+}
+
+
+.top-bar 
+{
+	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+  	gap: 10px;
+  	margin: 20px 0;
+  	flex-wrap: nowrap;
+}
+
+
+.start-button, .fullscreen-button 
+{
+	width: auto;  /* Predvolená šírka pre väčšie obrazovky */
+}
+
+
+@media (max-width: 768px) {
+.start-button, .fullscreen-button 
+{
+	width: 100%; /* Nastavíme tlačidlám šírku na 100% */
+    font-size: 24px; /* Znížime veľkosť písma */
+    padding: 12px 0;  /* Nastavíme padding pre väčší priestor */
+}
+}
+
+
+@media (max-width: 768px) {
+  .fullscreen-button {
+    display: block;
+    width: 100%;
+    font-size: 24px;
+    padding: 12px 0;
+  }
+}
+
+	
+@media (max-width: 768px) {
+.question-container, .start-container, .end-container 
+{
+	max-width: 100%;
+	padding: 10px;
+	border-width: 3px;
+	border-radius: 30px;
+	min-height: auto;
+}
+
+
+@media (max-width: 768px) {
+.top-bar 
+{
+	display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap;  /* Dôležité, aby nepretekali do ďalšieho riadku */
+    }
+    
+
+.left-section, .center-section, .right-section 
+{
+	flex: 0 1 auto; /* zrušíme rovnaké roztiahnutie, aby sa prispôsobili obsahu */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.left-section 
+{
+	justify-content: flex-start;
+}
+
+
+.center-section 
+{
+	justify-content: center;
+    flex-grow: 1; /* Timer nech zaberie zvyšný priestor */
+}
+
+
+.right-section 
+{
+	justify-content: flex-end;
+}
+
+
+.stop-button, .back-button 
+{
+	width: auto; /* nech sa prispôsobia obsahu */
+    min-width: 80px;
+    font-size: 18px;
+    padding: 8px 12px;
+    white-space: nowrap;
+}
+
+
+.qvizo-title 
+{
+	font-family: 'Broadway', sans-serif;
+	font-size: 36px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+
+.qvizo-title .q 
+{
+	color: red;
+}
+
+
+.qvizo-title .vizo 
+{
+	color: black;
+}
+
+
+.question-counter 
+{
+	font-size: 18px;
+}
+
+
+.timer 
+{
+	font-size: 20px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+
+.question 
+{
+	font-size: 24px;
+	padding: 10px;
+}
+
+
+.answer-button 
+{
+	font-size: 22px;
+	padding: 10px;
+	width: 100%;
+	margin: 6px 0;
+    	height: auto;         /* Nech sa výška prispôsobí obsahu */
+    	min-height: 80px;     /* Minimálna výška */
+}
+
+
+  .answer-text {
+   font-size: 18px;      /* Lepšia čitateľnosť na mobile */
+}
+
+
+.answers 
+{
+	flex-direction: column;
+	gap: 10px;
+}
+
+
+.answer-letter 
+{
+	width: 28px;
+	height: 28px;
+	font-size: 16px;
+	margin-right: 10px;
+}
+
+
+.menu button, .back-button, .stop-button 
+{
+	font-size 16px;
+	padding: 8px 12px;
+}
+
+
+.start-container button.start-button 
+{
+	font-size: 16px;
+	padding: 12px 24px;
+}
+
+
+.start-buttons-wrapper 
+{
+	display: flex;
+  	flex-direction: column;
+  	gap: 10px;
+  	width: 100%;
+}
+
+
+.time-button 
+{
+	font-size: 18px;
+	padding: 8px 16px;
+}
+
+
+.button-container 
+{
+	flex-direction: column;
+	align-items: center;
+}
+}
+
+@media (max-width: 768px) {
+
+:fullscreen .answers {
+    flex-direction: column;
+}
+
+:fullscreen .answer-button {
+    width: 100%;
+    min-width: 0;        /* 🔥 toto je najdôležitejšie */
+    height: auto;
+    font-size: 10px;
+    padding: 5px;
+}
+
+:fullscreen .answer-text {
+    font-size: 10px;
+    -webkit-line-clamp: 2;
+}
+
+}	
+	
+
+@media (min-width: 769px) {
+.question-container, .answers 
+{
+	max-width: 80%;   /* Nastav šírku na 80% pri desktopoch */
+} /*6.6.2025 bolaopacne zatvorka*/
+
+
+.answers 
+{
+	flex-direction: row;
+}
+
+
+.answer-button 
+{
+	width: 45%;
+}
+
+
+.top-bar 
+{
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
+  	gap: 20px;
+  	margin: 20px 0;
+  	flex-wrap: wrap;
+}
+
+
+.left-section, .center-section, .right-section 
+{
+	flex: 1;
+  	display: flex;
+  	align-items: center;
+}
+
+
+.left-section 
+{
+	justify-content: flex-start;
+}
+
+
+.center-section 
+{
+	justify-content: center;
+}
+
+
+.right-section 
+{
+	justify-content: flex-end;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+:fullscreen .answer-button 
+{
+	width: 45%;
+}
+}
+
+
+@media screen and (max-width: 1023px) {
+:fullscreen .answer-button 
+{
+	width: 100%;
+}
+}
+
+/* ============================= */
+/* NOVÉ TLAČIDLÁ – CAFE SOLO + KATEGÓRIE */
+/* ============================= */
+
+/* Modré tlačidlo CAFE SOLO */
+.button-container .cafe-solo-btn {
+    background-color: #1E90FF !important;
+}
+
+.button-container .cafe-solo-btn:hover {
+    background-color: #187bcd !important;
+}
+
+
+</style>
+<!-- 🔥 Sem pridáš Firebase SDK -->
+<!-- Firebase SDK compat -->
+<script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-auth-compat.js"></script>
+
+<script>
+  // Konfigurácia Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyCQWhi-mdf7crzHt-ftmmJGEQJb62Zh57U",
+    authDomain: "qvizo-cafe.firebaseapp.com",
+    projectId: "qvizo-cafe",
+    storageBucket: "qvizo-cafe.firebasestorage.app",
+    messagingSenderId: "691251487185",
+    appId: "1:691251487185:web:0284ac0e9e47e92663c0f0",
+    measurementId: "G-NGCXT5ZE1F"
+  };
+
+  // Inicializácia Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+
+	// Prístupové kódy
+  const validCodes = ["VIP2025", "TAPETA123", "NEZVEREJNUJ"];
+	
+</script>
+
+</head>
+<body>
+
+<!-- 0. OKNO Prihlásenie -->
+<div class="login-container" id="loginWindow">
+  <h2 class="qvizo-title">
+    <span class="q">Q</span><span class="vizo">VIZO</span>
+  </h2>
+
+  <button onclick="startDemo()">DEMO VERZIA</button>
+  
+  <input type="email" id="email" placeholder="Zadaj email">
+  <input type="password" id="password" placeholder="Zadaj heslo">
+ 	
+  <button onclick="login()">Prihlásiť sa</button>
+  <button onclick="register()">Vytvoriť účet</button>	
+
+  <p id="authMessage"></p>
+</div>
+
+<!-- 🔥 SEM PRIDAJ POPUP -->
+<div id="demoPopup" class="demo-popup">
+  <div class="demo-popup-box">
+    <h2>DEMO VERZIA</h2>
+    <p>Pre plnú verziu kontaktujte autora.<br>
+   craco.slovakia@gmail.com</p>
+    <button onclick="location.reload()">OK</button>
+  </div>
+</div>	
+
+<!-- 1. OKNO Úvod + Overovací kód -->
+<div class="new-start-container" id="newStartWindow">
+  <h2 class="qvizo-title">
+    <span class="q">Q</span><span class="vizo">VIZO</span>
+  </h2>
+  <h2>MIXÉR OTÁZOK</h2>
+
+  <!-- Overovací kód -->
+<div id="codeBox">
+<input type="password" id="accessCode" placeholder="Zadaj kód" 
+style="font-size:20px; padding:10px; margin:10px auto; width:80%; border-radius:10px; border:1px solid #333; display:block; text-align:center;">
+<p id="codeMessage" style="color:red; font-weight:bold;"></p>
+</div>
+
+
+<!-- Kategórie -->
+<div class="category-container">
+    <button class="category-btn" onclick="toggleCategory('GEO', this)">GEO</button>
+    <button class="category-btn" onclick="toggleCategory('HIS', this)">HIS</button>
+    <button class="category-btn" onclick="toggleCategory('NAT', this)">NAT</button>
+    <button class="category-btn" onclick="toggleCategory('PEO', this)">PEO</button>
+	<button class="category-btn" onclick="toggleCategory('SPO', this)">SPO</button>
+    <button class="category-btn" onclick="toggleCategory('MIX', this)">MIX</button>
+    <button class="category-btn" onclick="selectAllCategories(this)">ALL</button>
+</div>
+
+  <!-- Tlačidlo CAFE -->
+  <div class="button-container">
+    <button class="cafe-solo-btn" onclick="verifyAndStartCafeSolo()">CAFE 1</button>
+	   <button onclick="verifyAndStartCafe()">CAFE 4</button>
+	 
+     <button id="escBtn" onclick="exitFullScreen()" style="display:none;">ESC</button>
+</div>
+
+</div>
+
+<!-- 2. OKNO Výber času-->
+<div class="start-container"> 
+<h2 class="qvizo-title">
+<span class="q">Q</span><span class="vizo">VIZO</span>
+</h2>
+<h2>MIXÉR OTÁZOK</h2>
+<p>Posledná aktualizácia 11.3.2026</p>
+<p>Vyber si časový interval</p>
+<div class="time-buttons">
+<div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 10px;">
+<button class="time-button" onclick="setTime(5)">5</button>
+<button class="time-button" onclick="setTime(10)">10</button>
+</div>
+<div style="display: flex; justify-content: center; gap: 10px;">
+<button class="time-button" onclick="setTime(15)">15</button>
+<button class="time-button" onclick="setTime(20)">20</button>
+</div>
+<div style="display: flex; justify-content: center; gap: 10px;">
+<button class="time-button" onclick="setTime(25)">25</button>
+<button class="time-button" onclick="setTime(30)">30</button>
+</div>
+</div>
+<div class="start-buttons-wrapper">
+<button class="start-button" onclick="startGame()">INFINITY ∞</button>
+<button class="fullscreen-button" onclick="toggleFullScreen()">FULL SCREEN</button>
+<button class="start-button" onclick="startTucetMode()">DOZENO 12</button>	
+</div>
+</div>
+
+<!-- 3. OKNO Otázky a odpovede-->  
+<div class="question-container" style="display: none;">
+<div class="qvizo-title">
+<span class="q">Q</span><span class="vizo">VIZO</span>
+</div>
+<div>
+<div class="question-counter" id="counter"></div>
+</div>
+<div class="question" id="question"></div>
+<div class="top-bar new-top-bar">
+<button class="stop-button" onclick="togglePause()">STOP</button>
+<div class="timer" id="timer">Čas: 10</div>
+<button class="back-button" onclick="backToStart()">SPÄŤ</button>
+</div>
+<div class="answers">
+<div class="answer-button" id="btn0" onclick="answerQuestion(0)">
+<div class="answer-letter">A</div>
+<div class="answer-text"></div>
+</div>
+<div class="answer-button" id="btn1" onclick="answerQuestion(1)">
+<div class="answer-letter">B</div>
+<div class="answer-text"></div>
+</div>
+<div class="answer-button" id="btn2" onclick="answerQuestion(2)">
+<div class="answer-letter">C</div>
+<div class="answer-text"></div>
+</div>
+<div class="answer-button" id="btn3" onclick="answerQuestion(3)">
+<div class="answer-letter">D</div>
+<div class="answer-text"></div>
+</div>
+</div>
+<!-- Tlačidlo Späť-->     
+<div class="end-container">
+<button onclick="backToStart()" style="font-size: 20px; background-color: #800080; color: white; padding: 10px 20px; border: none; border-radius: 8px; cursor: pointer;">Späť na začiatok</button>
+</div>
+<script>
+
+window.onload = function() {
+  document.getElementById("loginWindow").style.display = "flex";
+  document.getElementById("newStartWindow").style.display = "none";
+  document.querySelector(".start-container").style.display = "none";
+  document.querySelector(".question-container").style.display = "none";
+  document.getElementById("loginWindow").style.display = "flex";
+};
+
+
+let selectedQuestions = [];
+let currentQuestionIndex = 0;
+let timerInterval;
+let userSelectedTime = 10;
+let timeLeft = 10;
+let isPaused = false;
+let isCafeSoloMode = false;	
+	let isTucetMode = false;
+let tucetQuestions = [];
+let questions = [];
+let demoMode = false; // zapína demo režim
+let usedQuestions = [];	
+// Mapovanie kategórií na JSON súbory
+const categoryFiles = {
+  GEO: "geo.json",
+  HIS: "his.json",
+  NAT: "nat.json",
+  PEO: "peo.json",
+  SPO: "spo.json",   // ✅ NOVÁ KATEGÓRIA
+  MIX: "mix.json"
+};
+
+let selectedCategories = [];
+
+function startDemo() {
+
+  demoMode = true;
+
+  document.getElementById("loginWindow").style.display = "none";
+  document.getElementById("newStartWindow").style.display = "flex";
+
+  // NEschovávaj celý box!
+  document.getElementById("codeBox").style.display = "block";
+
+  // skry iba input
+  document.getElementById("accessCode").style.display = "none";
+}
+	
+function toggleCategory(category, button) {
+  if (category === "ALL") return;
+
+  if (selectedCategories.includes(category)) {
+    selectedCategories = selectedCategories.filter(c => c !== category);
+    button.classList.remove("active");
+  } else {
+    selectedCategories.push(category);
+    button.classList.add("active");
+  }
+
+  // Skontroluj, či sú všetky kategórie vybrané
+  const allBtn = document.querySelector(".category-btn:last-child"); // tlačidlo ALL
+  if (selectedCategories.length === Object.keys(categoryFiles).length) {
+    allBtn.classList.add("active");
+  } else {
+    allBtn.classList.remove("active");
+  }
+
+  console.log("Vybrané kategórie:", selectedCategories);
+}
+
+
+function selectAllCategories(button) {
+  // Ak je ALL už aktívne, odznačíme všetko
+  if (button.classList.contains("active")) {
+    selectedCategories = [];
+    document.querySelectorAll(".category-btn").forEach(btn => btn.classList.remove("active"));
+  } else {
+    selectedCategories = Object.keys(categoryFiles);
+    document.querySelectorAll(".category-btn").forEach(btn => btn.classList.add("active"));
+  }
+
+  console.log("Vybrané kategórie:", selectedCategories);
+}
+    
+function shuffle(array) {
+for (let i = array.length - 1; i > 0; i--) {
+const j = Math.floor(Math.random() * (i + 1));
+[array[i], array[j]] = [array[j], array[i]];
+}
+}
+
+function setTime(selectedTime) {
+	userSelectedTime = selectedTime;
+	timeLeft = userSelectedTime;  // Reset timeLeft whenever a new time is selected
+	document.getElementById("timer").innerText = `Čas: ${timeLeft}`;
+	document.querySelectorAll(".time-button").forEach(btn => btn.classList.remove("active"));
+	const clickedBtn = Array.from(document.querySelectorAll(".time-button")).find(btn => btn.innerText.includes(selectedTime));
+	if (clickedBtn) clickedBtn.classList.add("active");
+}
+
+
+function adjustFontSizeForQuestion() {
+	const questionDiv = document.getElementById("question");
+  	const isMobile = window.innerWidth <= 768;
+	 // Nastavíme inú počiatočnú veľkosť pre mobil/desktop
+  	let fontSize = isMobile ? 40 : 120;
+    const minFontSize = isMobile ? 16 : 20;
+	questionDiv.style.fontSize = fontSize + "px";
+	 // Ak sa text nezmestí, zmenšuj fontSize až po minimálnu hodnotu
+  	while (questionDiv.scrollHeight > questionDiv.clientHeight && fontSize > minFontSize) {
+    fontSize -= 1;
+    questionDiv.style.fontSize = fontSize + "px";
+}
+}
+
+
+function adjustFontSizeForAnswers() {
+    const isMobile = window.innerWidth <= 768;
+    const buttons = document.querySelectorAll('.answer-button');
+    buttons.forEach(button => {
+    const textDiv = button.querySelector('.answer-text');
+    let fontSize = isMobile ? 28 : 72; // menšia veľkosť pre mobil
+    textDiv.style.fontSize = fontSize + 'px';
+    while (textDiv.scrollHeight > button.clientHeight && fontSize > 12) {
+    fontSize -= 1;
+    textDiv.style.fontSize = fontSize + 'px';
+}
+});
+}
+
+
+function startGame() {
+
+  if (selectedCategories.length === 0) {
+    alert("Vyber aspoň jednu kategóriu!");
+    return;
+  }
+
+  const filesToLoad = selectedCategories.map(cat => categoryFiles[cat]);
+
+  Promise.all(filesToLoad.map(file => fetch(file).then(res => res.json())))
+.then(jsonSubory => {
+
+  if (demoMode) {
+    questions = jsonSubory.map(cat => cat.slice(0, 12));
+  } else {
+    questions = jsonSubory;
+  }
+
+  selectedQuestions = buildInfinityQuestions(questions);
+
+  currentQuestionIndex = 0;
+
+  document.querySelector(".start-container").style.display = "none";
+  document.querySelector(".question-container").style.display = "flex";
+
+  showQuestion();
+})
+.catch(error => console.error("Chyba pri načítaní otázok:", error));
+}
+
+
+function showQuestion() {
+    const q = selectedQuestions[currentQuestionIndex];
+
+    // Zamiešame odpovede
+    const shuffledAnswers = [...q.answers];
+    shuffle(shuffledAnswers);
+
+    // Zistíme index správnej odpovede po zamiešaní
+    const correctIndex = shuffledAnswers.indexOf(q.answers[q.correct]);
+    selectedQuestions[currentQuestionIndex].shuffledCorrect = correctIndex;
+
+    // Zobrazíme otázku
+    const questionDiv = document.getElementById("question");
+	questionDiv.style.color = "#333"; // 🔥 reset farby na čiernu
+    /*questionDiv.innerText = q.question;*/
+    questionDiv.innerHTML = fixWidows(q.question).replace(/\n/g, "<br>");
+	
+    // ← tu zavolaj zmenšovanie veľkosti písma
+	
+    requestAnimationFrame(() => {
+    adjustFontSizeForQuestion();
+});
+
+    // Zobrazíme počítadlo otázok
+    document.getElementById("counter").innerText = 
+        `Otázka ${currentQuestionIndex + 1} / ${selectedQuestions.length}`;
+
+    // Zobrazíme odpovede
+    document.querySelectorAll(".answer-button").forEach((btn, i) => {
+        if (isCafeSoloMode) {
+            // 🔥 v SOLO režime odpovede skryjeme
+            btn.style.display = "none";
+        } else {
+            btn.style.display = "flex";
+            btn.querySelector(".answer-text").innerText = shuffledAnswers[i];
+            btn.querySelector(".answer-letter").innerText = ['A', 'B', 'C', 'D'][i];
+            btn.style.backgroundColor = "#ddd";
+            btn.style.color = "black";
+        }
+    });
+
+    // Prispôsobenie veľkosti písma pre odpovede
+    adjustFontSizeForAnswers();
+
+    // Nastavenie časovača
+    timeLeft = userSelectedTime;
+    document.getElementById("timer").innerText = "Čas: " + timeLeft;
+
+    // Zrušenie predchádzajúceho intervalu
+    clearInterval(timerInterval);
+    isPaused = false;
+    document.querySelector(".stop-button").innerText = "STOP";
+
+    // Spustenie nového intervalu odpočítavania
+    timerInterval = setInterval(() => {
+        if (!isPaused) {
+            timeLeft--;
+            document.getElementById("timer").innerText = "Čas: " + timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                highlightCorrectAnswer();
+            }
+        }
+    }, 1000);
+}
+
+	function fixWidows(text) {
+
+  // spojky a krátke slová, ktoré nechceme nechať osamote
+  const shortWords = ["a", "i", "v", "s", "z", "o", "u", "k"];
+
+  shortWords.forEach(word => {
+    const regex = new RegExp(`\\s${word}\\s`, "gi");
+    text = text.replace(regex, ` ${word}&nbsp;`);
+  });
+
+  return text;
+}
+
+function highlightCorrectAnswer() {
+
+  if (isCafeSoloMode) {
+    const q = selectedQuestions[currentQuestionIndex];
+    const correctAnswer = q.answers[q.correct];
+
+    const questionDiv = document.getElementById("question");
+    questionDiv.innerText = correctAnswer;  // 🔥 zobrazí sa iba správna odpoveď
+    questionDiv.style.color = "green";
+adjustFontSizeForQuestion();   // 🔥 TOTO DOPLŇ
+  } else {
+    const correctButton = document.querySelectorAll(".answer-button")[selectedQuestions[currentQuestionIndex].shuffledCorrect];
+    correctButton.style.backgroundColor = "#4CAF50";
+    correctButton.style.color = "white";
+  }
+
+  currentQuestionIndex++;
+
+  if (currentQuestionIndex < selectedQuestions.length) {
+
+    setTimeout(() => {
+      document.getElementById("question").style.color = "#333";
+      showQuestion();
+    }, 2000);
+
+} else {
+
+    setTimeout(() => {
+
+      if (isTucetMode) {
+
+  if (demoMode) {
+    // 🔴 DEMO = len jedno kolo
+    document.querySelector(".question-container").style.display = "none";
+    document.getElementById("demoPopup").style.display = "flex";
+  } else {
+    // 🟢 normálny režim ide ďalej
+    showQvizoLogo(() => {
+      startNewTucetCycle();
+    });
+  }
+
+      } else {
+
+        document.querySelector(".question-container").style.display = "none";
+
+        if (demoMode) {
+          document.getElementById("demoPopup").style.display = "flex";
+        } else {
+          startGame();
+        }
+
+      }
+
+    }, 2000);
+}
+}
+
+
+function togglePause() {
+	const stopBtn = document.querySelector(".stop-button");
+	isPaused = !isPaused;
+	stopBtn.innerText = isPaused ? "Pokračovať" : "Stop";
+}
+
+
+function backToStart() {
+	document.querySelector(".end-container").style.display = "none";
+	document.querySelector(".question-container").style.display = "none";
+	document.querySelector(".new-start-container").style.display = "flex";
+	document.querySelector(".start-container").style.display = "none";
+	
+	currentQuestionIndex = 0;
+	clearInterval(timerInterval);
+	isPaused = false;
+	document.querySelector(".stop-button").innerText = "Stop";
+	document.getElementById("timer").innerText = `Čas: ${userSelectedTime}`;
+}
+
+
+// Funkcia, ktorá sa zavolá pri kliknutí na "CAFE"
+function startCafe() {
+	console.log("Klikol si na CAFE"); // Log pre overenie, že funkcia sa vykonala
+	document.querySelector(".new-start-container").style.display = "none";
+	document.querySelector(".start-container").style.display = "block";
+}
+
+
+function toggleFullScreen() {
+	if (!document.fullscreenElement) {
+	document.documentElement.requestFullscreen().catch(err => {
+	alert(`Nepodarilo sa prepnúť do režimu celej obrazovky: ${err.message}`);
+	});
+	} else {
+	document.exitFullscreen();
+}
+}
+
+		function exitFullScreen() {
+  if (document.fullscreenElement) {
+    document.exitFullscreen();
+  }
+}
+
+function login() {
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value.trim();
+  if (!email || !password) {
+    document.getElementById("authMessage").style.color = "red";
+    document.getElementById("authMessage").innerText = "Zadaj email a heslo!";
+    return;
+  }
+
+  auth.signInWithEmailAndPassword(email, password)
+    .then(userCredential => {
+      // Skry loginWindow a zobraz newStartWindow (s overovacím kódom + CAFE)
+      document.getElementById("loginWindow").style.display = "none";
+      document.getElementById("newStartWindow").style.display = "flex";
+      document.getElementById("authMessage").innerText = "";
+    })
+    .catch(error => {
+      document.getElementById("authMessage").style.color = "red";
+      document.getElementById("authMessage").innerText = error.message;
+    });
+}
+
+
+function register() {
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (!email || !password) {
+      document.getElementById("authMessage").style.color = "red";
+      document.getElementById("authMessage").innerText = "Zadaj email a heslo!";
+      return;
+    }
+	auth.createUserWithEmailAndPassword(email, password)
+      .then(userCredential => {
+        document.getElementById("authMessage").style.color = "green";
+        document.getElementById("authMessage").innerText = "Účet vytvorený! Teraz sa môžeš prihlásiť.";
+      })
+      .catch(error => {
+        document.getElementById("authMessage").style.color = "red";
+        document.getElementById("authMessage").innerText = error.message;
+      });
+  }
+  
+function verifyAndStartCafe() {
+  const code = document.getElementById("accessCode").value.trim();
+  const msg = document.getElementById("codeMessage");
+
+  // Kontrola, či je vybraná aspoň jedna kategória
+  if (selectedCategories.length === 0) {
+    msg.style.color = "red";
+    msg.innerText = "Vyber si aspoň jednu kategóriu!";
+    return; // Funkcia sa zastaví
+  }
+
+	
+// 🔥 DEMO režim – preskočí kontrolu kódu
+  if (demoMode) {
+    isCafeSoloMode = false;
+
+    document.querySelector(".new-start-container").style.display = "none";
+    document.querySelector(".start-container").style.display = "block";
+    return;
+  }
+	
+  // Kontrola kódu
+  if (validCodes.includes(code)) {
+    msg.style.color = "green";
+    msg.innerText = "Kód správny!";
+	isCafeSoloMode = false;   // 🔥 vypneme SOLO režim  
+    document.querySelector(".new-start-container").style.display = "none";
+    document.querySelector(".start-container").style.display = "block";
+  } else {
+    msg.style.color = "red";
+    msg.innerText = "Neplatný kód! Skús znova.";
+  }
+}
+
+function verifyAndStartCafeSolo() {
+  const code = document.getElementById("accessCode").value.trim();
+  const msg = document.getElementById("codeMessage");
+
+  if (selectedCategories.length === 0) {
+    msg.style.color = "red";
+    msg.innerText = "Vyber si aspoň jednu kategóriu!";
+    return;
+  }
+
+
+  // 🔥 DEMO režim – preskočí kontrolu kódu
+  if (demoMode) {
+    isCafeSoloMode = true;
+	  
+    document.querySelector(".new-start-container").style.display = "none";
+    document.querySelector(".start-container").style.display = "block";
+    return;
+  }
+
+  // Normálna kontrola kódu
+  if (validCodes.includes(code)) {
+    msg.style.color = "green";
+    msg.innerText = "Kód správny!";
+
+    isCafeSoloMode = true;
+
+    document.querySelector(".new-start-container").style.display = "none";
+    document.querySelector(".start-container").style.display = "block";
+  } else {
+    msg.style.color = "red";
+    msg.innerText = "Neplatný kód! Skús znova.";
+  }
+}	
+
+document.addEventListener("fullscreenchange", function() {
+
+  const escBtn = document.getElementById("escBtn");
+
+  if (document.fullscreenElement) {
+    escBtn.style.display = "inline-block";   // zobrazí sa iba vo fullscreen
+  } else {
+    escBtn.style.display = "none";           // mimo fullscreen bude skryté
+  }
+
+});
+
+	function startTucetMode() {
+
+  if (selectedCategories.length === 0) {
+    alert("Vyber aspoň jednu kategóriu!");
+    return;
+  }
+
+  isTucetMode = true;
+  usedQuestions = []; // reset
+
+  const filesToLoad = selectedCategories.map(cat => categoryFiles[cat]);
+
+  Promise.all(filesToLoad.map(file => fetch(file).then(res => res.json())))
+    .then(jsonSubory => {
+
+      if (demoMode) {
+        // 🔥 DEMO – z každej kategórie len 12 otázok
+        questions = jsonSubory.map(cat => cat.slice(0, 12));
+      } else {
+        // 🔥 FULL – celé kategórie
+        questions = jsonSubory;
+      }
+
+      document.querySelector(".start-container").style.display = "none";
+      document.querySelector(".question-container").style.display = "flex";
+
+      startNewTucetCycle();
+    });
+}
+
+function startNewTucetCycle() {
+
+  let result = [];
+
+  // 🔥 AK JE LEN 1 alebo 2 kategórie → vezmi 12 otázok celkovo
+  if (questions.length <= 2) {
+
+    let allQuestions = questions.flat();
+
+    // odfiltruj už použité
+    let available = allQuestions.filter(q => !usedQuestions.includes(q));
+
+    if (available.length < 12) {
+      usedQuestions = [];
+      available = [...allQuestions];
+    }
+
+    shuffle(available);
+
+    result = available.slice(0, 12);
+    usedQuestions.push(...result);
+
+  } else {
+
+  let totalNeeded = 12;
+  let perCategory = Math.floor(totalNeeded / questions.length);
+  let remainder = totalNeeded % questions.length;
+
+  questions.forEach((categoryArray, index) => {
+
+    let take = perCategory;
+
+    // prvé kategórie dostanú +1 (aby bol súčet 12)
+    if (index < remainder) {
+      take += 1;
+    }
+
+    let available = categoryArray.filter(q => !usedQuestions.includes(q));
+
+    if (available.length < take) {
+      available = [...categoryArray];
+      usedQuestions = usedQuestions.filter(q => !categoryArray.includes(q));
+    }
+
+    shuffle(available);
+
+    let selected = available.slice(0, take);
+    result.push(...selected);
+    usedQuestions.push(...selected);
+
+  });
+}
+
+  shuffle(result);
+
+  tucetQuestions = result;
+  selectedQuestions = [...tucetQuestions];
+
+  currentQuestionIndex = 0;
+
+  showQuestion();
+}
+
+function showQvizoLogo(callback) {
+
+  const questionDiv = document.getElementById("question");
+
+questionDiv.innerHTML = `
+  <div style="text-align:center;">
+    
+    <div style="font-size:80px;">
+      <span style="color:red;">Q</span><span style="color:black;">VIZO</span>
+    </div>
+    
+    <div style="font-size:28px; margin-top:10px; color:#333;">
+      Najlepšia hra na svete
+    </div>
+
+  </div>
+`;
+	
+ // 🔴 SKRY odpovede
+  document.querySelectorAll(".answer-button").forEach(btn => {
+    btn.style.display = "none";
+  });
+	
+// 🔴 SKRY STOP, SPÄŤ, TIMER
+  document.querySelector(".stop-button").style.display = "none";
+  document.querySelector(".back-button").style.display = "none";
+  document.getElementById("timer").style.display = "none";
+  document.getElementById("counter").style.display = "none";
+  
+  setTimeout(() => {
+// 🟢 ZNOVU ZOBRAZ po logu
+    document.querySelector(".stop-button").style.display = "inline-block";
+    document.querySelector(".back-button").style.display = "inline-block";
+    document.getElementById("timer").style.display = "block";
+	document.getElementById("counter").style.display = "block";
+	  
+    document.querySelectorAll(".answer-button").forEach(btn => {
+      if (!isCafeSoloMode) btn.style.display = "flex";
+    });
+    callback();
+  }, 3000);
+}	
+
+	function buildInfinityQuestions(categories) {
+
+  // skopíruj a premiešaj každú kategóriu zvlášť
+  let shuffledCategories = categories.map(cat => {
+    let copy = [...cat];
+    shuffle(copy);
+    return copy;
+  });
+
+  let result = [];
+  let index = 0;
+  let hasMore = true;
+
+  while (hasMore) {
+    hasMore = false;
+
+    for (let i = 0; i < shuffledCategories.length; i++) {
+      if (index < shuffledCategories[i].length) {
+        result.push(shuffledCategories[i][index]);
+        hasMore = true;
+      }
+    }
+
+    index++;
+  }
+
+  return result;
+}
+	
+	
+if(demoMode){
+  alert("Pre plnú verziu kontaktujte autora. craco.slovakia@gmail.com");
+}	
+	
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
