@@ -132,8 +132,14 @@
 {"question": "Štát, ktorý v roku 2001 prvý \nlegalizoval manželstvá rovnakého pohlavia", "answers": ["USA", "Holandsko", "Švédsko", "Dánsko"], "correct": 1},
 {"question": "Krajina, v ktorej začala \npriemyselná revolúcia", "answers": ["Spojené štáty americké", "Veľká Británia", "Nemecko", "Francúzsko"], "correct": 1},
 {"question": "Prvý postkomunistický štát, \nktorý prijal v roku 2009 euro", "answers": ["Chorvátsko", "Slovensko", "Litva", "Estónsko"], "correct": 1},
-{ "question": "Vznik Spojeného kráľovstva \nVeľkej Británie", "answers": ["1707", "1756", "1789", "1801"], "correct": 0 }
-  
+{ "question": "Vznik Spojeného kráľovstva \nVeľkej Británie", "answers": ["1707", "1756", "1789", "1801"], "correct": 0 },
+
+  {"question": "Krajina, z ktorej prišla \nna Slovensko bryndza", "answers": ["Maďarsko", "Srbsko", "Rumunsko", "Ukrajina"], "correct": 2},
+  { "question": "Rok, v ktorom sa naposledy konali \nletné a zimné olympijské hry v tom istom roku", "answers": ["1984", "1988", "1992", "1996"], "correct": 2 },
+  { "question": "Meno múmie muža, ktorá sa našla \nv roku 1991 v Alpách", "answers": ["Trudpert", "Ötzi", "Yeti", "Kronos"], "correct": 1 },
+  { "question": "Počítačová hra, ktorú v roku 1984 \nvyvinul ruský programátor Alexej Pažitnov", "answers": ["Tetris", "Sonic", "Minecraft", "Pac-Man"], "correct": 0 },
+  { "question": "Koniec 1. svetovej vojny", "answers": ["11. novembra 1914", "11. novembra 1917", "11. novembra 1918", "28. júna 1919"], "correct": 2 }
+
   
 ]
 
