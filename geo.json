@@ -523,7 +523,36 @@
 { "question": "Kontinent \nnajmenej obývaný", "answers": ["Antarktída", "Austrália", "Afrika", "Európa"], "correct": 0 },
 { "question": "Svetadiel, v ktorom sa jazdí \nautom prevažne v ľavom pruhu", "answers": ["Afrika", "Ázia", "Austrália", "Európa"], "correct": 2 },
 { "question": "Kontinent, na ktorom sa nachádza \nštát Paraguaj", "answers": ["Afrika", "Južná Amerika", "Ázia", "Severná Amerika"], "correct": 1},
-{ "question": "Najväčší kontinent", "answers": ["Ázia", "Afrika", "Severná Amerika", "Antarktída"], "correct": 0 }
+{ "question": "Najväčší kontinent", "answers": ["Ázia", "Afrika", "Severná Amerika", "Antarktída"], "correct": 0 },
+
+{"question": "Vodná cesta prechádzajúca \njazerom Loch Ness", "answers": ["Kaledonský kanál", "Kielský kanál", "Škótský kanál", "Panama kanál"], "correct": 0},
+  { "question": "Krajina vychádzajúceho slnka", "answers": ["Čína", "Japonsko", "India", "Kórea"], "correct": 1 },
+  { "question": "Štát, ktorý má tvar čižmy", "answers": ["Španielsko", "Taliansko", "Grécko", "Chorvátsko"], "correct": 1 },
+  { "question": "Krajina tulipánov", "answers": ["Dánsko", "Fínsko", "Holandsko", "Belgicko"], "correct": 2 },
+  { "question": "Krajina, z ktorej pochádza \nbojové umenie džudo", "answers": ["Čína", "Japonsko", "Indonézia", "Kórea"], "correct": 1 },
+  { "question": "Štát, ktorý je najväčší na svete", "answers": ["Rusko", "Kanada", "USA", "Čína"], "correct": 0 },
+  { "question": "Krajina, v ktorej sa nachádza centrum \nfilmového priemyslu známe ako Bollywood", "answers": ["India", "Čína", "USA", "Pakistan"], "correct": 0 },
+  { "question": "Štát, v ktorom sa nachádza \nvrch Kilimandžáro", "answers": ["Etiópia", "Keňa", "Tanzánia", "Uganda"], "correct": 2 },
+  { "question": "Národný kameň Austrálie", "answers": ["Opál", "Diamant", "Zafír", "Ametyst"], "correct": 0 },
+  { "question": "Krajina, ktorá má na \nvlajke zelený céder", "answers": ["Irán", "Libanon", "Tanzánia", "Sýria"], "correct": 1 },
+  { "question": "Štát, pod ktorý patrí \nSeverné Írsko", "answers": ["Spojené kráľovstvo", "Francúzsko", "Holandsko", "USA"], "correct": 0 },
+{ "question": "Africký štát, ktorý má prezývku \n„Krajina tisícich kopcov", "answers": ["Rwanda", "Panama", "Keňa", "Uganda"], "correct": 0 },
+{ "question": "Krajina, v ktorej sa nachádza \nkozmodróm Bajkonur", "answers": ["Rusko", "Gruzínsko", "Kazachstan", "Ukrajina"], "correct": 2 },
+{ "question": "Krajina, ktorá má prezývku \n„Obilnica Európy“", "answers": ["Moldavsko", "Poľsko", "Ukrajina", "Francúzsko"], "correct": 2 },
+{ "question": "Krajina fjordov", "answers": ["Fínsko", "Kanada", "Nórsko", "Švédsko"], "correct": 2},
+{ "question": "Štát, v ktorom by ste navštívili mestá \nTerst, Bari a Padovu", "answers": ["Švajčiarsko", "Španielsko", "Taliansko", "Francúzsko"], "correct": 2},
+{"question": "Štát, ktorému patrí \nostrov Korzika", "answers": ["Francúzsko", "Španielsko", "Taliansko", "Grécko"], "correct": 0},
+{"question": "Krajina polmesiaca", "answers": ["Omán", "Turecko", "Sýria", "Irán"], "correct": 1},
+{"question": "Krajina vychádzajúceho slnka", "answers": ["Thajsko", "Japonsko", "Indonézia", "Čína"], "correct": 1},
+{"question": "Krajina, z ktorou má Slovensko \nnajkratšiu spoločnú hranicu (107 km)", "answers": ["Ukrajina", "Rakúsko", "Poľsko", "Maďarsko"], "correct": 1},
+{"question": "Štát Spojených štatov amerických, \nktorý má najväčšiu rozlohu", "answers": ["Texas", "Aljaška", "Kansas", "Kalifornia"], "correct": 1},
+{"question": "Štát, v ktorom sa nachádza \nregión Vojvodina", "answers": ["Slovinsko", "Chorvátsko", "Srbsko", "Bosna a Hercegovina"], "correct": 2},
+{"question": "Severoeurópsky štát, \nktorý nie je v Európskej únii", "answers": ["Fínsko", "Švédsko", "Nórsko", "Dánsko"], "correct": 2},
+{"question": "Štát, ktorý má najdlhšiu \nspoločnú hranicu s Maďarskom", "answers": ["Rumunsko", "Srbsko", "Slovensko", "Ukrajina"], "correct": 2},
+{"question": "Krajina, ktorá má Grónsko \nako svoje autonómne územie", "answers": ["Fínsko", "Nórsko", "Dánsko", "Švédsko"], "correct": 2},
+{"question": "Najrozsiahlejšia nížina na Slovensku", "answers": ["Záhorská nížina", "Východoslovenská nížina", "Podunajská nížina", "Považská nížina"], "correct": 2},
+{"question": "Najväčšia sopka na Sicílii", "answers": ["Etna", "Vezuv", "Amiata", "Stromboli"], "correct": 0}
+  
 
 ]
 
