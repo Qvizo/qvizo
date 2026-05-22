@@ -795,7 +795,7 @@
 { "question": "Udalosť, kedy Duch Svätý zostúpil na apoštolov", "answers": ["Turice", "Veľká noc", "Vianoce", "Krst"], "correct": 0 },
 { "question": "Prorok Starého zákona, ktorého život je spomenutý v Novom zákone pri ukrižovaní", "answers": ["Izaiáš", "Jeremiáš", "Daniel", "Ezechiel"], "correct": 0 },
 { "question": "Apoštol, ktorý šíril kresťanstvo medzi pohanmi", "answers": ["Pavol", "Peter", "Jakub", "Ján"], "correct": 0 },
-{ "question": "Biblické miesto, kde sa Ježiš modlil pred zatknutím", "answers": ["Getsemanská záhrada", "Golgota", "Betlehem", "Nazaret"], "correct": 0 }
+{ "question": "Biblické miesto, kde sa Ježiš modlil pred zatknutím", "answers": ["Getsemanská záhrada", "Golgota", "Betlehem", "Nazaret"], "correct": 0 },
 { "question": "Najrozšírenejšie náboženstvo v Japonsku", "answers": ["Budhizmus", "Šintoizmus", "Hinduizmus", "Kresťanstvo"], "correct": 1 },
 { "question": "Iný názov pre „Popolcovú stredu“", "answers": ["Smútočná streda", "Čierna streda", "Škaredá streda", "Zelená streda"], "correct": 2 },
 { "question": "Cirkev, ktorá používa Juliánsky kalendár na výpočet Vianoc a Veľkej noci", "answers": ["Evanjelická", "Pravoslávna", "Katolícka", "Protestantská"], "correct": 1 },
