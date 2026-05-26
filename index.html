@@ -22,9 +22,7 @@ body
 
 min-height: 100vh;
 }
-
-	/* 🔥 PRIDAJ TOTO */
-#newStartWindow {
+	#newStartWindow {
 	display: none;
 }
 
@@ -46,13 +44,11 @@ min-height: 100vh;
 	text-align: center;
 }
 
-
 .question-container, .start-container, .end-container 
 {
 	margin: 20px;
-	max-width: 1200px;         /*⬅️ TÚTO hodnotu môžeš zväčšiť */
+	max-width: 1200px;  
 	min-height: 20vh;
-	
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -65,14 +61,12 @@ min-height: 100vh;
 	position: relative;
 }
 
-
 .question-counter 
 {
 	font-size: 28px;
 	color: #777;
 	margin-bottom: 10px;
 }
-
 
 .question 
 {
@@ -84,19 +78,18 @@ min-height: 100vh;
 	border-radius: 20px;
 	background-color: #F8D1B2;
 	margin-bottom: 5px;
-	word-wrap: break-word; /* Zabezpečí zalomenie textu */
-		white-space: normal;
+	word-wrap: break-word;
+	white-space: normal;
 	text-align: center;
-		display: flex;
-	align-items: center;          /* Vertikálne centrovanie */
-	justify-content: center;      /* Horizontálne centrovanie */
+	display: flex;
+	align-items: center;          
+	justify-content: center;      
 	flex-grow: 1;
 	min-height: 150px; /* Nastavenie minimálnej výšky pre viac riadkov */
 	max-height: 150px;
   	overflow: hidden;  /* žiadne scrollovanie */
 	overflow-y: auto;
 }
-
 
 .timer 
 {
@@ -105,7 +98,6 @@ min-height: 100vh;
 	font-weight: bold;
 	margin-bottom: 20px;
 }
-
 
 .answers 
 {
@@ -116,7 +108,6 @@ min-height: 100vh;
 	justify-content: space-between;
 	gap: 20px;
 }
-
 
 .answer-button 
 {
@@ -140,7 +131,6 @@ min-height: 100vh;
     align-items: center;
 }
 
-
 .answer-letter 
 {
 	display: flex;
@@ -156,7 +146,6 @@ min-height: 100vh;
 	flex-shrink: 0; /* zabráni zmenšovaniu pri dlhších textoch */
 }
 
-
 .answer-text 
 {
 	flex-grow: 1;
@@ -165,7 +154,6 @@ min-height: 100vh;
     overflow-wrap: break-word;
     line-height: 1.2;
 }
-
 
 .menu button, .back-button, .stop-button 
 {
@@ -182,19 +170,16 @@ min-height: 100vh;
 	white-space: nowrap;
 }
 
-
 .back-button 
 {
 	background-color: #6495ED !important;
 	color: white;
 }
 
-
 .back-button:hover 
 {
 	background-color: #0000CD !important;
 }
-
 
 .stop-button 
 {
@@ -202,12 +187,10 @@ min-height: 100vh;
 	color: white;
 }
 
-
 .stop-button:hover 
 {
 	background-color: orange !important;
 }
-
 
 .button-container {
 	display: flex;
@@ -310,7 +293,6 @@ min-height: 100vh;
 #escBtn:hover {
   background-color: darkgray !important;
 }
-	
 
 @media (max-width: 768px) {
 
@@ -331,7 +313,6 @@ min-height: 100vh;
 }
 }
 
-
 .qvizo-title 
 {
 	font-family: 'Broadway', sans-serif;
@@ -341,30 +322,25 @@ min-height: 100vh;
 	margin-bottom: 10px;
 }
 
-
 .qvizo-title .q 
 {
 	color: red;
 }
 
-
 .qvizo-title .vizo 
 {
 	color: black;
 }
-	
     
 .question-container 
 {
 	display: none;
 }
 
-
 .question-container .qvizo-title 
 {
 	font-size: 40px;
 }
-
 
 .question-container .q 
 {
@@ -376,18 +352,15 @@ min-height: 100vh;
 color: black;
 }
 
-
 .start-container, .end-container 
 {
 	display: none;
 }
 
-
 .end-container 
 {
 	text-align: center;
 }
-
 
 .start-container button.start-button 
 {
@@ -409,7 +382,6 @@ color: black;
 	background-color: #B57EDC;
 }
 
-
 .button-container 
 {
 	display: flex;
@@ -418,12 +390,10 @@ color: black;
 	flex-wrap: wrap;
 }
 
-
 .time-buttons 
 {
 	margin-top: 20px;
 }
-
 
 .time-button 
 {
@@ -439,13 +409,11 @@ color: black;
 	width: 20%; /* Zabezpečí, že tlačidlá budú rovnako široké */
 }
 
-
 .time-button.active 
 {
 	background-color: #B57EDC;
 	color: white;
 }
-
 
 .button-container button /* Pridané štýly pre tlačidlá "Cafe" a "Solo" */
 {
@@ -459,7 +427,6 @@ color: black;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
 }
-
 
 /* CAFE */
 .button-container button:first-child {
@@ -493,12 +460,10 @@ color: black;
 	transition: background-color 0.3s ease, font-size 0.3s ease;
 }
 
-
 .fullscreen-button:hover 
 {
 	background-color: green;
 }
-
 
 :fullscreen .question-container 
 {
@@ -515,7 +480,6 @@ color: black;
   	overflow: hidden; /* Skryje všetok obsah, ktorý prekračuje */
 }
 
-
 :fullscreen .answers 
 {
   display: flex;
@@ -523,14 +487,13 @@ color: black;
   justify-content: space-between; /* Udržuje odpovede v riadku, ale zabezpečí medzery medzi nimi */
     flex-wrap: wrap;  /* zabezpečí zalomenie 5.6.2025*/
 }
-
 	
 :fullscreen .answer-button 
 {	
 	font-size: 32px;
   	line-height: 1.2;              /* Výška jedného riadku v násobkoch fontu */
-  	  font-size: 32px;
-  height: calc(1.2em * 2 + 20px);
+  	font-size: 32px;
+    height: calc(1.2em * 2 + 20px);
 	width: 48%;  /* Namiesto fixných 700px použi percentá 5.6.2025*/
   	min-width: 300px; /* Aby sa nezmenšovali príliš 5.6.2025 */
   	box-sizing: border-box;
@@ -540,7 +503,6 @@ color: black;
   	align-items: center;
   	justify-content: flex-start;     
 }
-
 
 :fullscreen .answer-text {
 	white-space: normal;
@@ -554,19 +516,14 @@ color: black;
   	line-height: 1.2;
 }
 
-	
-
 :fullscreen .qvizo-title {
 	margin-bottom: 0px;
 }
-
 
 :fullscreen .question-counter {
 	margin-top: 0px;
   	margin-bottom: 5px;
 }
-
-
 
 :fullscreen .top-bar {
 	display: flex;
@@ -577,14 +534,12 @@ color: black;
   	flex-wrap: nowrap;  /* zachováš ich v jednom riadku */
 }
 
-
 :fullscreen .question {
 	font-size: 48px ;
-  max-height: 350px;
+    max-height: 350px;
   	min-height: 100px;       /* zvýši minimálnu výšku */
 	overflow: hidden;
 }
-
 
 .top-bar 
 {
@@ -596,12 +551,10 @@ color: black;
   	flex-wrap: nowrap;
 }
 
-
 .start-button, .fullscreen-button 
 {
 	width: auto;  /* Predvolená šírka pre väčšie obrazovky */
 }
-
 
 @media (max-width: 768px) {
 .start-button, .fullscreen-button 
@@ -612,7 +565,6 @@ color: black;
 }
 }
 
-
 @media (max-width: 768px) {
   .fullscreen-button {
     display: block;
@@ -621,7 +573,6 @@ color: black;
     padding: 12px 0;
   }
 }
-
 	
 @media (max-width: 768px) {
 .question-container, .start-container, .end-container 
@@ -632,7 +583,6 @@ color: black;
 	border-radius: 30px;
 	min-height: auto;
 }
-
 
 @media (max-width: 768px) {
 .top-bar 
@@ -645,7 +595,6 @@ color: black;
     flex-wrap: nowrap;  /* Dôležité, aby nepretekali do ďalšieho riadku */
     }
     
-
 .left-section, .center-section, .right-section 
 {
 	flex: 0 1 auto; /* zrušíme rovnaké roztiahnutie, aby sa prispôsobili obsahu */
@@ -654,12 +603,10 @@ color: black;
     justify-content: center;
 }
 
-
 .left-section 
 {
 	justify-content: flex-start;
 }
-
 
 .center-section 
 {
@@ -667,12 +614,10 @@ color: black;
     flex-grow: 1; /* Timer nech zaberie zvyšný priestor */
 }
 
-
 .right-section 
 {
 	justify-content: flex-end;
 }
-
 
 .stop-button, .back-button 
 {
@@ -683,7 +628,6 @@ color: black;
     white-space: nowrap;
 }
 
-
 .qvizo-title 
 {
 	font-family: 'Broadway', sans-serif;
@@ -692,24 +636,20 @@ color: black;
 	margin-bottom: 10px;
 }
 
-
 .qvizo-title .q 
 {
 	color: red;
 }
-
 
 .qvizo-title .vizo 
 {
 	color: black;
 }
 
-
 .question-counter 
 {
 	font-size: 18px;
 }
-
 
 .timer 
 {
@@ -718,13 +658,11 @@ color: black;
     text-align: center;
 }
 
-
 .question 
 {
 	font-size: 24px;
 	padding: 10px;
 }
-
 
 .answer-button 
 {
@@ -732,22 +670,19 @@ color: black;
 	padding: 10px;
 	width: 100%;
 	margin: 2px 0;
-    	height: 55px;         /* Nech sa výška prispôsobí obsahu */
-    	min-height: 55px;     /* Minimálna výška */
+   	height: 55px;         /* Nech sa výška prispôsobí obsahu */
+    min-height: 55px;     /* Minimálna výška */
 }
-
 
   .answer-text {
    font-size: 18px;      /* Lepšia čitateľnosť na mobile */
 }
-
 
 .answers 
 {
 	flex-direction: column;
 	gap: 10px;
 }
-
 
 .answer-letter 
 {
@@ -757,20 +692,17 @@ color: black;
 	margin-right: 10px;
 }
 
-
 .menu button, .back-button, .stop-button 
 {
 	font-size 16px;
 	padding: 8px 12px;
 }
 
-
 .start-container button.start-button 
 {
 	font-size: 16px;
 	padding: 12px 24px;
 }
-
 
 .start-buttons-wrapper 
 {
@@ -780,13 +712,11 @@ color: black;
   	width: 100%;
 }
 
-
 .time-button 
 {
 	font-size: 18px;
 	padding: 8px 16px;
 }
-
 
 .button-container 
 {
@@ -813,9 +743,7 @@ color: black;
     font-size: 10px;
     -webkit-line-clamp: 2;
 }
-
 }	
-	
 
 @media (min-width: 769px) {
 .question-container, .answers 
@@ -823,18 +751,15 @@ color: black;
 	max-width: 80%;   /* Nastav šírku na 80% pri desktopoch */
 } /*6.6.2025 bolaopacne zatvorka*/
 
-
 .answers 
 {
 	flex-direction: row;
 }
 
-
 .answer-button 
 {
 	width: 45%;
 }
-
 
 .top-bar 
 {
@@ -846,7 +771,6 @@ color: black;
   	flex-wrap: wrap;
 }
 
-
 .left-section, .center-section, .right-section 
 {
 	flex: 1;
@@ -854,25 +778,20 @@ color: black;
   	align-items: center;
 }
 
-
 .left-section 
 {
 	justify-content: flex-start;
 }
-
 
 .center-section 
 {
 	justify-content: center;
 }
 
-
 .right-section 
 {
 	justify-content: flex-end;
 }
-
-
 
 @media screen and (min-width: 1024px) {
 :fullscreen .answer-button 
@@ -881,14 +800,12 @@ color: black;
 }
 }
 
-
 @media screen and (max-width: 1023px) {
 :fullscreen .answer-button 
 {
 	width: 100%;
 }
 }
-
 	
 /* ============================= */
 /* NOVÉ TLAČIDLÁ – CAFE SOLO + KATEGÓRIE */
@@ -903,13 +820,12 @@ color: black;
     background-color: #187bcd !important;
 }
 
-
 </style>
 <!-- 🔥 Sem pridáš Firebase SDK -->
 <!-- Firebase SDK compat -->
 <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-auth-compat.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics-compat.js"></script>
 
 <script>
   // Konfigurácia Firebase
@@ -938,45 +854,40 @@ color: black;
 
 <!-- 0. OKNO Prihlásenie -->
 <div class="login-container" id="loginWindow">
-  <h2 class="qvizo-title">
-    <span class="q">Q</span><span class="vizo">VIZO</span>
-  </h2>
-
-  <button onclick="startDemo()">DEMO VERZIA</button>
-  
-  <input type="email" id="email" placeholder="Zadaj email">
-  <input type="password" id="password" placeholder="Zadaj heslo">
- 	
-  <button onclick="login()">Prihlásiť sa</button>
-  <button onclick="register()">Vytvoriť účet</button>	
-
-  <p id="authMessage"></p>
+<h2 class="qvizo-title">
+<span class="q">Q</span><span class="vizo">VIZO</span>
+</h2>
+<button onclick="startDemo()">DEMO VERZIA</button>
+<input type="email" id="email" placeholder="Zadaj email">
+<input type="password" id="password" placeholder="Zadaj heslo">
+<button onclick="login()">Prihlásiť sa</button>
+<button onclick="register()">Vytvoriť účet</button>	
+<p id="authMessage"></p>
 </div>
 
 <!-- 🔥 SEM PRIDAJ POPUP -->
 <div id="demoPopup" class="demo-popup">
-  <div class="demo-popup-box">
-    <h2>DEMO VERZIA</h2>
-    <p>Pre plnú verziu kontaktujte autora.<br>
-   craco.game@gmail.com</p>
-    <button onclick="location.reload()">OK</button>
-  </div>
-</div>	
+<div class="demo-popup-box">
+<h2>DEMO VERZIA</h2>
+<p>Pre plnú verziu kontaktujte autora.<br>
+ craco.game@gmail.com</p>
+ <button onclick="location.reload()">OK</button>
+ </div>
+ </div>	
 
 <!-- 1. OKNO Úvod + Overovací kód -->
 <div class="new-start-container" id="newStartWindow">
-  <h2 class="qvizo-title">
-    <span class="q">Q</span><span class="vizo">VIZO</span>
-  </h2>
-  <h2>Zvoľ si kategóriu otázok a typ hry</h2>
+<h2 class="qvizo-title">
+<span class="q">Q</span><span class="vizo">VIZO</span>
+</h2>
+<h2>Zvoľ si kategóriu otázok a typ hry</h2>
 
-  <!-- Overovací kód -->
+<!-- Overovací kód -->
 <div id="codeBox">
 <input type="password" id="accessCode" placeholder="Zadaj kód" 
 style="font-size:20px; padding:10px; margin:10px auto; width:80%; border-radius:10px; border:1px solid #333; display:block; text-align:center;">
 <p id="codeMessage" style="color:red; font-weight:bold;"></p>
 </div>
-
 
 <!-- Kategórie -->
 <div class="category-container">
@@ -991,12 +902,10 @@ style="font-size:20px; padding:10px; margin:10px auto; width:80%; border-radius:
 
   <!-- Tlačidlo CAFE -->
   <div class="button-container">
-    <button class="cafe-solo-btn" onclick="verifyAndStartCafeSolo()">CAFE 1</button>
-	   <button onclick="verifyAndStartCafe()">CAFE 4</button>
-	 
-     <button id="escBtn" onclick="exitFullScreen()" style="display:none;">ESC</button>
+  <button class="cafe-solo-btn" onclick="verifyAndStartCafeSolo()">CAFE 1</button>
+  <button onclick="verifyAndStartCafe()">CAFE 4</button>
+  <button id="escBtn" onclick="exitFullScreen()" style="display:none;">ESC</button>
 </div>
-
 </div>
 
 <!-- 2. OKNO Výber času-->
@@ -1074,7 +983,6 @@ window.onload = function() {
   document.getElementById("loginWindow").style.display = "flex";
 };
 
-
 let selectedQuestions = [];
 let currentQuestionIndex = 0;
 let timerInterval;
@@ -1082,12 +990,12 @@ let userSelectedTime = 10;
 let timeLeft = 10;
 let isPaused = false;
 let isCafeSoloMode = false;	
-	let isTucetMode = false;
+let isTucetMode = false;
 let tucetQuestions = [];
 let questions = [];
 let demoMode = false; // zapína demo režim
 let usedQuestions = [];	
-	let answerLocked = false;
+let answerLocked = false;
 let waitingNextQuestion = false;
 // Mapovanie kategórií na JSON súbory
 const categoryFiles = {
@@ -1102,17 +1010,13 @@ const categoryFiles = {
 let selectedCategories = [];
 
 function startDemo() {
-
-  demoMode = true;
-
-  document.getElementById("loginWindow").style.display = "none";
-  document.getElementById("newStartWindow").style.display = "flex";
-
-  // NEschovávaj celý box!
-  document.getElementById("codeBox").style.display = "block";
-
-  // skry iba input
-  document.getElementById("accessCode").style.display = "none";
+demoMode = true;
+document.getElementById("loginWindow").style.display = "none";
+document.getElementById("newStartWindow").style.display = "flex";
+// NEschovávaj celý box!
+document.getElementById("codeBox").style.display = "block";
+// skry iba input
+document.getElementById("accessCode").style.display = "none";
 }
 	
 function toggleCategory(category, button) {
@@ -1199,30 +1103,22 @@ function adjustFontSizeForAnswers() {
 
 
 function startGame() {
-
   if (selectedCategories.length === 0) {
     alert("Vyber aspoň jednu kategóriu!");
     return;
   }
-
   const filesToLoad = selectedCategories.map(cat => categoryFiles[cat]);
-
   Promise.all(filesToLoad.map(file => fetch(file).then(res => res.json())))
 .then(jsonSubory => {
-
   if (demoMode) {
     questions = jsonSubory.map(cat => cat.slice(0, 12));
   } else {
     questions = jsonSubory;
   }
-
   selectedQuestions = buildInfinityQuestions(questions);
-
   currentQuestionIndex = 0;
-
   document.querySelector(".start-container").style.display = "none";
   document.querySelector(".question-container").style.display = "flex";
-
   showQuestion();
 })
 .catch(error => console.error("Chyba pri načítaní otázok:", error));
